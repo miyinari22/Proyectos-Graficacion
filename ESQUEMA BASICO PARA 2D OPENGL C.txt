@@ -1,0 +1,36 @@
+///ESQUEMA BASICO PARA 2D OPENGL C
+
+glBegin(GL_LINES);
+	glVertex2i(10,10);
+	glVertex2i(10,100);
+glEND();
+///Esto pintara una linea del punto (10,10) al punto (100,100)
+
+///Paleta de colores con
+glColor3f(RGB);
+glColor3f(0,1,0); VERDE glColor3f(0,0,0); NEGRO
+glColor3f(0,0,1); AZUL glColor3f(0,1,1); CYAN
+glColor3f(1,0,0); ROJO glColor3f(1,0,1); MAGENTA
+glColor3f(1,1,1); BLANCO glColor3f(1,1,0); AMARILLO
+
+///Tamanio del punto con 
+glPointSize(numero), por default es 1
+
+
+/////OTRO EJEMPLO
+#include <GL/glut.h>
+void inicializa(void){
+	glMatrixMode(GL_PROJECTION);
+	gluOrtho2d(0,400,0,400);
+}
+void pinta (void){
+	glClear(GL_COLOR_BUFFER_BIT);
+	glColor3f();
+	glPointSize();
+	glLineWidth();
+	glBegin(GL_POINTS);
+	glVertex2i(10,10);
+	glVertex2i(100,100);
+	glEnd();
+	glFlush();
+}
